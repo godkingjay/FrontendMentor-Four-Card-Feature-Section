@@ -179,6 +179,12 @@ main {
   main {
     margin-block: 3rem;
   }
+
+  .card {
+    height: 100%;
+    aspect-ratio: auto;
+    gap: 2rem;
+  }
 }
 
 @media (min-width: 1081px) {
