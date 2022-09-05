@@ -93,9 +93,8 @@ main {
 .card:after {
   content: '';
   position: absolute;
-  height: 6px;
+  height: 4px;
   width: 100%;
-  background: black;
   top: 0;
   left: 0;
 }
@@ -104,16 +103,32 @@ main {
   grid-area: one;
 }
 
+.card:nth-child(1):after {
+  background: var(--card-clr-green);
+}
+
 .card:nth-child(2) {
   grid-area: two;
+}
+
+.card:nth-child(2):after {
+  background: var(--card-clr-red);
 }
 
 .card:nth-child(3) {
   grid-area: three;
 }
 
+.card:nth-child(3):after {
+  background: var(--card-clr-orange);
+}
+
 .card:nth-child(4) {
   grid-area: four;
+}
+
+.card:nth-child(4):after {
+  background: var(--card-clr-blue);
 }
 
 .card-title {
