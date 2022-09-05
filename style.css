@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap");
+
+:root {
+  --text-clr-titles: hsl(234, 12%, 34%);
+  --text-clr-description: hsl(229, 6%, 66%);
+  --card-clr-green: hsl(180, 62%, 55%);
+  --card-clr-red: hsl(0, 78%, 62%);
+  --card-clr-orange: hsl(34, 97%, 64%);
+  --card-clr-blue: hsl(212, 86%, 64%);
+}
+
 *, *:after, *:before {
   box-sizing: border-box;
   margin: 0;
@@ -11,31 +22,155 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.header,
+.card-title {
+  color: var(--text-clr-titles);
+}
+
+.description,
+.card-description {
+  color: var(--text-clr-description);
+}
+
 main {
+  width: 100%;
   margin: 2rem;
 }
 
 .wrapper {
   height: 100%;
   width: 100%;
-  display: block;
+  display: flex;
 }
 
 .content {
   display: flex;
+  height: 100%;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  margin-block: 1rem;
+  margin-bottom: 1rem;
 }
 
 .header-title {
-  font-weight: 200;
+  font-weight: 100;
+}
+
+.description {
+  text-align: center;
+  max-width: 34rem;
+}
+
+.card-ctn {
+  display: grid;
+  margin-top: 3rem;
+  gap: 2rem;
+  place-items: center;
+  grid-auto-rows: 1fr;
+  grid-auto-columns: 1fr;
+  max-width: 64rem;
+}
+
+.card {
+  aspect-ratio: 3/2;
+  width: 100%;
+  box-shadow: 0 1rem 2rem #4482;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 22rem;
+}
+
+.card:after {
+  content: '';
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background: black;
+  top: 0;
+  left: 0;
+}
+
+.card:nth-child(1) {
+  grid-area: one;
+}
+
+.card:nth-child(2) {
+  grid-area: two;
+}
+
+.card:nth-child(3) {
+  grid-area: three;
+}
+
+.card:nth-child(4) {
+  grid-area: four;
+}
+
+.card-title {
+  font-size: 1.25rem;
+}
+
+.card-description {
+  font-size: 0.8rem;
+}
+
+.card-illustration {
+  margin-top: auto;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: right;
+}
+
+@media (max-width: 336px) {
+  .card {
+    aspect-ratio: auto;
+  }
+}
+
+@media (max-width: 672px) {
+  main {
+    margin-block: 4rem;
+  }
+
+  .card-ctn {
+    grid-template-areas: 
+            "one"
+            "two"
+            "three"
+            "four";
+  }
+}
+
+@media (min-width: 673px) {
+  main {
+    margin-block: 3rem;
+  }
+
+  .card-ctn {
+    grid-template-areas:
+            "one two"
+            "three four";
+  }
+}
+
+@media (min-width: 1081px) {
+  .card-ctn {
+    grid-template-areas:
+            "one two four"
+            "one three four";
+  }
 }
 
 footer {
