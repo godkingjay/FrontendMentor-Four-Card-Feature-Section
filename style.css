@@ -1,0 +1,57 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  margin: 2rem;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-block: 1rem;
+}
+
+.header-title {
+  font-weight: 200;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.25rem;
+  width: 100%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
