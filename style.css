@@ -45,11 +45,9 @@ main {
 
 .content {
   display: flex;
-  height: 100%;
   width: 100%;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   position: relative;
 }
 
@@ -162,7 +160,7 @@ main {
   }
 }
 
-@media (max-widthL: 1080px) {
+@media (max-width: 1080px) {
   main {
     margin-block: 3rem;
   }
