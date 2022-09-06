@@ -23,11 +23,11 @@ Users should be able to:
 
 ### Screenshot
 
--Desktop
+- **Desktop**
 
 ![DESKTOP](./screenshot.png)
 
--Mobile
+- **Mobile**
 
 ![MOBILE](./screenshot-mobile.png)
 
