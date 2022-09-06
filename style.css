@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap");
 
 :root {
+  --background-clr: hsl(0, 0%, 98%);
   --text-clr-titles: hsl(234, 12%, 34%);
-  --text-clr-description: hsl(229, 6%, 66%);
+  --text-clr-description: hsl(234, 12%, 34%);
   --card-clr-green: hsl(180, 62%, 55%);
   --card-clr-red: hsl(0, 78%, 62%);
   --card-clr-orange: hsl(34, 97%, 64%);
@@ -74,7 +75,7 @@ main {
   place-items: center;
   grid-auto-rows: 1fr;
   grid-auto-columns: 1fr;
-  max-width: 64rem;
+  max-width: 70rem;
 }
 
 .card {
@@ -89,6 +90,7 @@ main {
   overflow: hidden;
   max-width: 22rem;
   transition: transform 0.2s ease-in-out;
+  gap: 2rem;
 }
 
 .card:hover {
@@ -188,7 +190,6 @@ main {
   .card {
     height: 100%;
     aspect-ratio: auto;
-    gap: 2rem;
   }
 }
 
@@ -197,10 +198,20 @@ main {
     margin-block: 2rem;
   }
 
+  .content {
+    justify-content: center;
+  }
+
   .card-ctn {
     grid-template-areas:
             "one two four"
             "one three four";
+  }
+}
+
+@media (min-width: 96rem) {
+  .content {
+    justify-content: flex-start;
   }
 }
 
