@@ -197,21 +197,11 @@ main {
   main {
     margin-block: 2rem;
   }
-
-  .content {
-    justify-content: center;
-  }
-
+  
   .card-ctn {
     grid-template-areas:
             "one two four"
             "one three four";
-  }
-}
-
-@media (min-width: 96rem) {
-  .content {
-    justify-content: flex-start;
   }
 }
 
