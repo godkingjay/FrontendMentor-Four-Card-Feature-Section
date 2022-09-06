@@ -25,11 +25,11 @@ Users should be able to:
 
 -Desktop
 
-![DESKTOP](./screenshot.jpg)
+![DESKTOP](./screenshot.png)
 
 -Mobile
 
-![MOBILE](./screenshot-mobile.jpg)
+![MOBILE](./screenshot-mobile.png)
 
 ### Links
 
